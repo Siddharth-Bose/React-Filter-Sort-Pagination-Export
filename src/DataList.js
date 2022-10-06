@@ -4,9 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.css";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
-import filterFactory, {textFilter} from "react-bootstrap-table2-filter";
-import 'react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css';
-
+import filterFactory, { textFilter } from "react-bootstrap-table2-filter";
+import "react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css";
 
 export default function DataList() {
   const [userList, setUserList] = useState([]);
@@ -14,8 +13,13 @@ export default function DataList() {
     row.id % 2 === 0 ? "bg-dark text-light" : "bg-secondary";
   const columns = [
     { dataField: "id", text: "Id" },
-    { dataField: "name", text: "Name", sort: true , filter:textFilter()},
-    { dataField: "username", text: "UserName", sort: true, filter:textFilter() },
+    { dataField: "name", text: "Name", sort: true, filter: textFilter() },
+    {
+      dataField: "username",
+      text: "UserName",
+      sort: true,
+      filter: textFilter(),
+    },
     { dataField: "email", text: "Email Id", sort: true },
   ];
 

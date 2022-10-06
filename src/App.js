@@ -1,14 +1,7 @@
-// import logo from './logo.svg';
-// import './App.css';
-import DataList from './DataList';
-// import { useState , useEffect} from 'react';
+import DataList from "./DataList";
 
 function App() {
-
-  
-  return (
-    <DataList />
-  );
+  return <DataList />;
 }
 
 export default App;
